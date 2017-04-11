@@ -5,22 +5,27 @@ body {
 }
 
 a.primaryCTA {
-  background: #01EFAD;
-  padding: 10px 36px;
+  background: #dfc538;
+  padding: 8px 42px;
   text-decoration: none;
   color: #fff;
   margin: 0 2px;
   text-transform: uppercase;
+  font-size: .8em;
 }
 
 a.secondaryCTA {
   background: none;
-  border: 1px solid #01EFAD;
+  border: 1px solid #dfc538;
   padding: 10px 36px;
   text-decoration: none;
   color: #01EFAD;
   margin: 0 2px;
   text-transform: uppercase;
+}
+
+.blurb h3, .aboutme h3 {
+  font-size: 1.75em;
 }
 
 .mainNav {
@@ -49,44 +54,111 @@ a.secondaryCTA {
 }
 
 .landing {
-  height: 80vh;
-  background: url(http://placehold.it/900x200) no-repeat center center;
+  height: 98vh;
+  margin-top: -2vh;
+  background: url(../img/LandingPage_bg.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 .landing .callToAction {
-  width: 30%;
+  width: 45%;
   position: absolute;
-  top: 20%;
-  left: 50%;
-  margin-left: -20%;
-  padding: 2.5% 5% 6% 5%;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.5);
+  top: 50%;
+  right: 0%;
+  margin-top: -15%;
+  padding: 2.5% 5% 3% 5%;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.3);
 }
 .landing .callToAction .title {
   font-size: 2.5em;
   text-transform: uppercase;
   font-weight: 800;
   margin-bottom: 0;
+  color: #dfc538;
+}
+.landing .callToAction span {
+  font-size: 1em;
+  display: block;
+  float: right;
+  color: #ffffff;
+  font-style: italic;
+  margin: 2.5% 10% 0 0;
+  letter-spacing: .11em;
+}
+.landing .callToAction p {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.2em;
 }
 .landing .callToAction p:last-of-type {
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
-.blogPosts {
-  width: 100%;
-  margin-top: 5%;
+.bodyContainer {
+  width: 80%;
+  max-width: 1400px;
+  display: block;
+  margin: 0 auto;
 }
-.blogPosts .featuredPosts {
-  width: 28%;
+.blogPosts {
+  width: 60%;
+  margin-top: 5%;
+  float: left;
+}
+.sidebar {
+  width: 25%;
+  margin: 6.25% 0 0 1%;
+  float: left;
+}
+
+.recentPosts {
+  background: #ececec;
+  padding: 8%;
+}
+
+.recentPosts ul{
+  margin-left: -18%;
+}
+
+.sidebar .recentPosts li{
+  display: block;
+  padding: 5px 0;
+  list-style: none;
+  margin-left: 0;
+}
+
+
+.sidebar .socialMedia li {
+  display: inline-block;
+}
+
+.sidebar .recentPosts img{
+  width: 50px;
+}
+
+.sidebar .recentPosts li img,
+.sidebar .recentPosts li p{
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 5px;
+}
+
+.blogPosts .featuredPosts_primary {
+  width: 96%;
   display: inline-block;
   padding: 2% 2% 0 2%;
 }
-.blogPosts .featuredPosts img {
+.blogPosts .featuredPosts_primary img,
+.blogPosts .featuredPosts_secondary img {
   width: 100%;
+}
+.blogPosts .featuredPosts_secondary{
+  width: 45.5%;
+  display: inline-block;
+  padding: 2% 2% 0 2%;
 }
 .blogPosts .ctaBar a {
   background: #00B9B9;
@@ -99,30 +171,59 @@ a.secondaryCTA {
 }
 
 .destinationMap {
-  background: url(http://placehold.it/900x200) no-repeat center center;
+  background: url(../img/map_bg.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   display: block;
-  margin-top: 0;
-}
-.destinationMap .blurb {
-  display: inline-block;
-  width: 12em;
-  margin: 20% 0 10% 15%;
-  padding: 5%;
-  text-align: center;
-  background: #ffffff;
+  display: block;
+  width: 100%;
+  height: 200%;
+  position: absolute;
+  top: 1300px;
+  z-index: -10;
 }
 
+.destinations {
+  width: 30%;
+  margin: 12% 0 0 10%;
+  height: 120vh;
+}
+
+.destinations .callToAction .title {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 0;
+  color: #dfc538;
+}
+.destinations .callToAction span {
+  font-size: 1em;
+  display: block;
+  float: right;
+  color: #000000;
+  font-style: italic;
+  margin: 2.5% 10% 0 0;
+  letter-spacing: .11em;
+}
+.destinations .callToAction p {
+  color: #000000;
+  font-size: 1em;
+}
+.destinations .callToAction p:last-of-type {
+  margin-bottom: 5%;
+}
+
+
 .bio {
-  background: url(http://placehold.it/900x200/dadada) no-repeat center center;
+  background: url(../img/SelfPortrait_bg.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   display: block;
+  height: 80vh;
 }
 .bio .aboutme {
   display: inline-block;
@@ -132,3 +233,9 @@ a.secondaryCTA {
   text-align: center;
   background: #ffffff;
 }
+
+
+
+/*CLEARFIX*/
+.clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}.clearfix:after{clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0}* html .clearfix,*:first-child+html .clearfix{zoom:1}
+
